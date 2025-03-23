@@ -1,4 +1,4 @@
-import datetime
+from datetime import datetime
 from typing import Annotated, List, Optional
 from uuid import UUID
 
@@ -47,9 +47,9 @@ class CreateUserRequestDto(BaseModel):
     active_user_inbounds: Optional[List[str]] = Field(
         None, serialization_alias="activeUserInbounds"
     )
-    expire_at: datetime.datetime = Field(..., serialization_alias="expireAt")
-    created_at: Optional[datetime.datetime] = Field(None, serialization_alias="createdAt")
-    last_traffic_reset_at: Optional[datetime.datetime] = Field(
+    expire_at: datetime = Field(..., serialization_alias="expireAt")
+    created_at: Optional[datetime] = Field(None, serialization_alias="createdAt")
+    last_traffic_reset_at: Optional[datetime] = Field(
         None, serialization_alias="lastTrafficResetAt"
     )
     description: Optional[str] = None
@@ -72,8 +72,8 @@ class UpdateUserRequestDto(BaseModel):
     active_user_inbounds: Optional[List[str]] = Field(
         None, serialization_alias="activeUserInbounds"
     )
-    expire_at: Optional[datetime.datetime] = Field(None, serialization_alias="expireAt")
-    last_traffic_reset_at: Optional[datetime.datetime] = Field(
+    expire_at: Optional[datetime] = Field(None, serialization_alias="expireAt")
+    last_traffic_reset_at: Optional[datetime] = Field(
         None, serialization_alias="lastTrafficResetAt"
     )
     description: Optional[str] = None
@@ -92,11 +92,11 @@ class UserResponseDto(BaseModel):
     traffic_limit_bytes: Optional[int] = Field(None, alias="trafficLimitBytes")
     traffic_limit_strategy: Optional[str] = Field(None, alias="trafficLimitStrategy")
     sub_last_user_agent: Optional[str] = Field(None, alias="subLastUserAgent")
-    sub_last_opened_at: Optional[datetime.datetime] = Field(None, alias="subLastOpenedAt")
-    expire_at: Optional[datetime.datetime] = Field(None, alias="expireAt")
-    online_at: Optional[datetime.datetime] = Field(None, alias="onlineAt")
-    sub_revoked_at: Optional[datetime.datetime] = Field(None, alias="subRevokedAt")
-    last_traffic_reset_at: Optional[datetime.datetime] = Field(None, alias="lastTrafficResetAt")
+    sub_last_opened_at: Optional[datetime] = Field(None, alias="subLastOpenedAt")
+    expire_at: Optional[datetime] = Field(None, alias="expireAt")
+    online_at: Optional[datetime] = Field(None, alias="onlineAt")
+    sub_revoked_at: Optional[datetime] = Field(None, alias="subRevokedAt")
+    last_traffic_reset_at: Optional[datetime] = Field(None, alias="lastTrafficResetAt")
     trojan_password: str = Field(alias="trojanPassword")
     vless_uuid: UUID = Field(alias="vlessUuid")
     ss_password: str = Field(alias="ssPassword")

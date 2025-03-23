@@ -1,4 +1,4 @@
-import datetime
+from datetime import datetime
 from typing import Annotated, List, Optional
 from uuid import UUID
 
@@ -22,8 +22,8 @@ class SubscriptionSettingsResponseDto(BaseModel):
     expired_users_remarks: List[str] = Field(alias="expiredUsersRemarks")
     limited_users_remarks: List[str] = Field(alias="limitedUsersRemarks")
     disabled_users_remarks: List[str] = Field(alias="disabledUsersRemarks")
-    created_at: datetime.datetime = Field(alias="createdAt")
-    updated_at: datetime.datetime = Field(alias="updatedAt")
+    created_at: datetime = Field(alias="createdAt")
+    updated_at: datetime = Field(alias="updatedAt")
 
 
 class UpdateSubscriptionSettingsRequestDto(BaseModel):

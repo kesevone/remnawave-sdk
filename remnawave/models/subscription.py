@@ -1,4 +1,4 @@
-import datetime
+from datetime import datetime
 from typing import Optional
 
 from pydantic import BaseModel, Field
@@ -13,7 +13,7 @@ class UserSubscription(BaseModel):
     traffic_used: str = Field(alias="trafficUsed")
     traffic_limit: str = Field(alias="trafficLimit")
     traffic_limit_strategy: TrafficLimitStrategy = Field(alias="trafficLimitStrategy")
-    expires_at: datetime.datetime = Field(alias="expiresAt")
+    expires_at: datetime = Field(alias="expiresAt")
     user_status: UserStatus = Field(alias="userStatus")
     is_active: bool = Field(alias="isActive")
 

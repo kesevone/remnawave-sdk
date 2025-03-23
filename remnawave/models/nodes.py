@@ -1,4 +1,4 @@
-import datetime
+from datetime import datetime
 from typing import Annotated, List, Optional
 from uuid import UUID
 
@@ -100,8 +100,8 @@ class NodeResponseDto(BaseModel):
     cpu_count: Optional[int] = Field(None, alias="cpuCount")
     cpu_model: Optional[str] = Field(None, alias="cpuModel")
     total_ram: Optional[str] = Field(None, alias="totalRam")
-    created_at: datetime.datetime = Field(alias="createdAt")
-    updated_at: datetime.datetime = Field(alias="updatedAt")
+    created_at: datetime = Field(alias="createdAt")
+    updated_at: datetime = Field(alias="updatedAt")
     excluded_inbounds: List[ExcludedInbounds] = Field(alias="excludedInbounds")
 
 

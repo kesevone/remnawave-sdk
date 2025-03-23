@@ -1,4 +1,4 @@
-import datetime
+from datetime import datetime
 from typing import List, Optional
 from uuid import UUID
 
@@ -20,7 +20,7 @@ class UpdateUserFields(BaseModel):
     traffic_limit_strategy: Optional[str] = Field(
         None, serialization_alias="trafficLimitStrategy"
     )
-    expire_at: Optional[datetime.datetime] = Field(None, serialization_alias="expireAt")
+    expire_at: Optional[datetime] = Field(None, serialization_alias="expireAt")
     description: Optional[str] = None
     telegram_id: Optional[int] = Field(None, serialization_alias="telegramId")
     email: Optional[str] = None
@@ -34,7 +34,7 @@ class BulkAllUpdateUsersRequestDto(BaseModel):
     traffic_limit_strategy: Optional[str] = Field(
         None, serialization_alias="trafficLimitStrategy"
     )
-    expire_at: Optional[datetime.datetime] = Field(None, serialization_alias="expireAt")
+    expire_at: Optional[datetime] = Field(None, serialization_alias="expireAt")
     description: Optional[str] = None
     telegram_id: Optional[int] = Field(None, serialization_alias="telegramId")
     email: Optional[str] = None
