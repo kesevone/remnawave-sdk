@@ -12,12 +12,10 @@ This library simplifies working with the API by providing convenient controllers
 
 ## 📦 Installation
 
-Currently, the SDK is available via Git. Clone the repository and install the dependencies:
+Currently, the SDK is available via Git. You can install it directly using `pip`:
 
 ```bash
-git clone https://github.com/kesevone/remnawave-sdk.git
-cd remnawave-sdk
-poetry install
+pip install git+https://github.com/kesevone/remnawave-sdk.git
 ```
 
 ---
